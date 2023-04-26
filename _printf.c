@@ -32,7 +32,15 @@ count += write(1, &c, 1);
 break;
 }
 case 's':
-count += write(1, va_arg(args, char *), strlen(va_arg(args, char *)));
+char *str = va_arg(args, char *);
+if (str == NULL)
+{
+count += write(1, "(null)", 6);
+}
+else
+{
+count += write(1, str, strlen(str));
+}
 break;
 case '%':
 count += write(1, "%", 1);
