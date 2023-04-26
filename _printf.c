@@ -43,9 +43,6 @@ break;
 case '%':
 count += write(1, "%", 1);
 break;
-default:
-count += write(1, "%", 1) + write(1, format, 1);
-break;
 }
 }
 else
