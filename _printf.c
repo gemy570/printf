@@ -1,6 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+#include <string.h>
 #include <stdarg.h>
 #include <unistd.h>
-#include <string.h>
 #include "main.h"
 
 /**
