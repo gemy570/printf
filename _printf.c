@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 {
 int count = 0;
 va_list args;
+char c;
 
 va_start(args, format);
 while (*format)
@@ -26,7 +27,7 @@ switch (*format)
 {
 	case 'c':
 {
-char c = (char)va_arg(args, int);
+c = (char)va_arg(args, int);
 count += write(1, &c, 1);
 break;
 }
