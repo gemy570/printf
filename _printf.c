@@ -28,7 +28,7 @@ format++;
 if (*format == '\0')
 {
 count += write(1, "%", 1);
-break;
+return(-1);
 }
 if (*format == '%')
 {
