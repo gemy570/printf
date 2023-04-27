@@ -64,11 +64,7 @@ break;
 }
 }
 else
-{
-if (*format == '\0')
-return (-1);
 count += write(1, format, 1);
-}
 format++;
 }
 va_end(args);
