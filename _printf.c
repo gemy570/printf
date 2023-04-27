@@ -25,9 +25,20 @@ while (*format)
 if (*format == '%')
 {
 format++;
+if (*format == '\0')
+{
+count += write(1, "%", 1);
+break;
+}
+if (*format == '%')
+{
+count += write(1, "%", 1);
+format++;
+continue;
+}
 switch (*format)
 {
-	case 'c':
+case 'c':
 {
 c = (char)va_arg(args, int);
 count += write(1, &c, 1);
