@@ -41,6 +41,9 @@ switch (*format)
 case 'c':
 {
 c = (char)va_arg(args, int);
+if (c == '\0')
+count += write(1, &c, 1);
+else
 count += write(1, &c, 1);
 break;
 }
