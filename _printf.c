@@ -28,7 +28,7 @@ format++;
 if (*format == '\0')
 {
 count += write(1, "%", 1);
-return(-1);
+return (-1);
 }
 if (*format == '%')
 {
@@ -42,7 +42,7 @@ case 'c':
 {
 c = (char)va_arg(args, int);
 if (c == '\0')
-count += write(1, &c, 1);
+count += write(1, "\\0", 2);
 else
 count += write(1, &c, 1);
 break;
