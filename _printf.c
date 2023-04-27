@@ -78,10 +78,10 @@ if (*format == '%')
 {
 format++;
 if (*format == '\0')
- {
+{
 count += write(1, "%", 1);
 break;
- }
+}
 else if (*format == '%')
 count += write(1, "%", 1);
 else if (*format == 'c')
