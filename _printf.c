@@ -71,6 +71,11 @@ va_list args;
 
 if (format == NULL)
 return (-1);
+if (*format == '%' && *(format + 1) == '\0')
+{
+count += write(1, "%", 1);
+return (count);
+}
 va_start(args, format);
 while (*format != '\0')
 {
