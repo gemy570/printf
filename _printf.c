@@ -13,13 +13,13 @@
  */
 int _printf(const char *format, ...)
 {
-if (format == NULL)
-return (-1);
 int count = 0;
 va_list args;
 char c;
 
 va_start(args, format);
+if (format == NULL)
+return (-1);
 while (*format)
 {
 if (*format == '%')
