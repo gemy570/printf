@@ -40,6 +40,7 @@ switch (*format)
 {
 case 'c':
 {
+c = (char)va_arg(args, int);
 if (c == '\0')
 count += write(1, " ", 1);
 else
