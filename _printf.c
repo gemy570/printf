@@ -74,7 +74,7 @@ return (-1);
 if (*format == '%' && *(format + 1) == '\0')
 {
 count += write(1, "%", 1);
-return (count);
+return (-1);
 }
 va_start(args, format);
 while (*format != '\0')
