@@ -90,7 +90,7 @@ else if (*format == 'c')
 count += print_char(va_arg(args, int));
 else if (*format == 's')
 count += print_string(va_arg(args, char *));
-else if (*format == 'd'  || *format= 'i' )
+else if (*format == 'd'  || *format == 'i' );
 count += print_integer(va_arg(args, int));
 else
 count += write(1, "%", 1) + write(1, format, 1);
